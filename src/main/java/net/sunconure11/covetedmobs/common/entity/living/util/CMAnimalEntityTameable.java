@@ -1,4 +1,4 @@
-package net.sunconure11.covetedmobs.client.model.entity.util;
+package net.sunconure11.covetedmobs.common.entity.living.util;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.TameableEntity;
