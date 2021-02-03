@@ -10,8 +10,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import net.sunconure11.covetedmobs.client.model.entity.util.CMAnimalEntity;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class BlindwormEntity extends CMAnimalEntity {
+public class BlindwormEntity extends CMAnimalEntity implements IAnimatable {
 
 	public BlindwormEntity(EntityType<? extends AnimalEntity> entityType, World world) {
 		super(entityType, world);
@@ -23,6 +26,16 @@ public class BlindwormEntity extends CMAnimalEntity {
 
 	@Override
 	public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+		return null;
+	}
+
+	@Override
+	public void registerControllers(AnimationData animationData) {
+
+	}
+
+	@Override
+	public AnimationFactory getFactory() {
 		return null;
 	}
 }

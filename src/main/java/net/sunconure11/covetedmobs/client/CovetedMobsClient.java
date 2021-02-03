@@ -8,6 +8,6 @@ import net.sunconure11.covetedmobs.common.registry.CMEntityTypes;
 public class CovetedMobsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		EntityRendererRegistry.INSTANCE.register(CMEntityTypes.BLINDWORM, (dispatcher, context) -> new BlindwormEntityRenderer(dispatcher));
+		EntityRendererRegistry.INSTANCE.register(CMEntityTypes.BLINDWORM, (entityRenderDispatcher, context) -> new BlindwormEntityRenderer(entityRenderDispatcher));
 	}
 }
