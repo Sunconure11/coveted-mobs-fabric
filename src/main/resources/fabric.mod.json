@@ -16,11 +16,13 @@
   "environment": "*",
   "entrypoints": {
 	"main": [
-	  "net.fabricmc.example.ExampleMod"
+	  "net.sunconure11.covetedmobs.CovetedMobs"
+	],
+	"client": [
+	  "net.sunconure11.covetedmobs.client.CovetedMobsClient"
 	]
   },
   "mixins": [
-	"modid.mixins.json"
   ],
   "depends": {
 	"fabricloader": ">=0.7.4",
