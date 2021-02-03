@@ -4,16 +4,17 @@ package net.sunconure11.covetedmobs.client.model.entity.living;
 // Paste this class into your mod and generate all required imports
 
 
+import com.google.common.collect.ImmutableList;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.AnimalModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
+import net.sunconure11.covetedmobs.common.entity.living.BlindwormEntity;
 
 @Environment(EnvType.CLIENT)
-public class BlindwormModel extends EntityModel<Entity> {
+public class BlindwormModel<T extends BlindwormEntity> extends AnimalModel<T> {
 	private final ModelPart body;
 	private final ModelPart bodyB;
 	private final ModelPart neck00;
@@ -115,7 +116,7 @@ public class BlindwormModel extends EntityModel<Entity> {
 	}
 
 	@Override
-	public void setAngles(Entity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+	public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
 
 	}
 
@@ -128,5 +129,15 @@ public class BlindwormModel extends EntityModel<Entity> {
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha) {
 
+	}
+
+	@Override
+	protected Iterable<ModelPart> getHeadParts() {
+		return ImmutableList.of();
+	}
+
+	@Override
+	protected Iterable<ModelPart> getBodyParts() {
+		return ImmutableList.of(body);
 	}
 }
