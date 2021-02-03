@@ -1,4 +1,5 @@
-package net.sunconure11.covetedmobs.client.model.entity.living;// Made with Blockbench 3.7.5
+package net.sunconure11.covetedmobs.client.model.entity.living;
+// Made with Blockbench 3.7.5
 // Exported for Minecraft version 1.15
 // Paste this class into your mod and generate all required imports
 
