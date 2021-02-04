@@ -3,8 +3,14 @@ package net.sunconure11.covetedmobs;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.util.Identifier;
 import net.sunconure11.covetedmobs.common.CMConfig;
 import net.sunconure11.covetedmobs.common.registry.CMEntityTypes;
+import net.sunconure11.covetedmobs.common.registry.CMObjects;
 import net.sunconure11.covetedmobs.common.registry.CMWorldSpawns;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,6 +19,7 @@ public class CovetedMobs implements ModInitializer {
 
 	public static final String MODID = "covetedmobs";
 	public static final Logger logger = LogManager.getLogger(MODID);
+	public static final ItemGroup COVETED_MOBS_GROUP = FabricItemGroupBuilder.build(new Identifier(MODID, MODID), () -> new ItemStack(Items.MUTTON));
 	public static CMConfig config;
 
 	@Override
@@ -22,6 +29,7 @@ public class CovetedMobs implements ModInitializer {
 		config = AutoConfig.getConfigHolder(CMConfig.class).getConfig();
 		CMEntityTypes.init();
 		CMWorldSpawns.init();
+		CMObjects.init();
 
 		logger.info("We need another and a wiser and perhaps a more mystical concept of animals.");
 		logger.info("Remote from universal nature, and living by complicated artifice, man in civilization surveys the creature through the glass of his knowledge and sees thereby a feather magnified and the whole image in distortion.");
