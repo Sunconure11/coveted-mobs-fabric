@@ -32,6 +32,15 @@ dependencies {
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.18:dev"	
 	modImplementation "io.github.prospector:modmenu:1.14.13+build.21"
 	modRuntime "me.shedaniel:RoughlyEnoughItems:5.8.9"	
+	modApi("me.shedaniel.cloth:config-2:4.8.3") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	include "me.shedaniel.cloth:config-2:4.8.3"
+
+	modImplementation("me.sargunvohra.mcmods:autoconfig1u:3.3.1") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	include "me.sargunvohra.mcmods:autoconfig1u:3.3.1"	
 }
 
 processResources {

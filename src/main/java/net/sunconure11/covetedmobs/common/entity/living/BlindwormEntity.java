@@ -9,6 +9,7 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import net.sunconure11.covetedmobs.common.entity.util.CMAnimalEntity;
+import net.sunconure11.covetedmobs.common.registry.CMEntityTypes;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -38,7 +39,8 @@ public class BlindwormEntity extends CMAnimalEntity implements IAnimatable {
 
 	@Override
 	public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-		return null;
+		BlindwormEntity child = CMEntityTypes.BLINDWORM.create(world);
+		return child;
 	}
 
 	@Override
