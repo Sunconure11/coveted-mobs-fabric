@@ -29,7 +29,7 @@ dependencies {
 	
 	include "me.shedaniel.cloth:config-2:4.8.3"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.15:dev"	
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.18:dev"	
 	modImplementation "io.github.prospector:modmenu:1.14.13+build.21"
 	modRuntime "me.shedaniel:RoughlyEnoughItems:5.8.9"	
 }
