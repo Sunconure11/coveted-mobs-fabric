@@ -1,7 +1,7 @@
 package net.sunconure11.covetedmobs.common;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
 import net.minecraft.world.biome.Biome;
 import net.sunconure11.covetedmobs.CovetedMobs;
 
