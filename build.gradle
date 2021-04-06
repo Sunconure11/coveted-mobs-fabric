@@ -11,8 +11,13 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url 'https://repo.repsy.io/mvn/gandiber/geckolib' }
-	jcenter()
+    maven 
+	{ url 'https://repo.repsy.io/mvn/gandiber/geckolib' }
+	}
+		maven {
+		name = "cloth config"
+		url = "https://maven.shedaniel.me/"
+	}
 }
 
 dependencies {
@@ -26,21 +31,14 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
-	
-	include "me.shedaniel.cloth:config-2:4.8.3"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.18:dev"	
-	modImplementation "io.github.prospector:modmenu:1.14.13+build.21"
-	modRuntime "me.shedaniel:RoughlyEnoughItems:5.8.9"	
-	modApi("me.shedaniel.cloth:config-2:4.8.3") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
-	include "me.shedaniel.cloth:config-2:4.8.3"
-
-	modImplementation("me.sargunvohra.mcmods:autoconfig1u:3.3.1") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
-	include "me.sargunvohra.mcmods:autoconfig1u:3.3.1"	
+    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.29:dev'
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+    modRuntime "me.shedaniel:RoughlyEnoughItems:${project.rei_version}"
+	
+	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 }
 
 processResources {
